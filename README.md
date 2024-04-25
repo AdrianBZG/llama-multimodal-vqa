@@ -44,6 +44,7 @@ This code is based on the [Hugging Face Transformers](https://huggingface.co/tra
 
 ## Useful Links
 
+- [Trained model in HF hub](https://huggingface.co/AdrianBZG/llama-3-8B-Instruct-VisualQuestionAnswering)
 - [LLaVA](https://llava-vl.github.io/)
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
 - [LLaMA 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
