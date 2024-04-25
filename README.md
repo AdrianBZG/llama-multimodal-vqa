@@ -1,10 +1,10 @@
-# 🦙🌄 Multimodal (Visual) Instruction Tuning for LLaMA 3
+# 🦙🌄 Multimodal (Visual) Instruction Tuning for Llama 3
 
-This repository contains code for multimodal (visual) instruction tuning of the LLaMA 3 language model. 
+This repository contains code for multimodal (visual) instruction tuning of the Llama 3 language model. 
 
-The idea is to fine-tune the LLaMA 3 model on a multimodal dataset that contains both textual instructions and visual demonstrations. We trained this model with the [llava_instruct_80k](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_instruct_80k.json) dataset. See [LLaVA](https://llava-vl.github.io/) for related methods.
+The idea is to fine-tune the Llama 3 model on a multimodal dataset that contains both textual instructions and visual demonstrations. We trained this model with the [llava_instruct_80k](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_instruct_80k.json) dataset. See [LLaVA](https://llava-vl.github.io/) for related methods.
 
-The code is intended to be an easy-to-use starting point for multimodal instruction tuning. Uses [Hugging Face Transformers](https://huggingface.co/) library for the LLaMA 3 model and for training.
+The code is intended to be an easy-to-use starting point for multimodal instruction tuning. Uses [Hugging Face Transformers](https://huggingface.co/) library for the Llama 3 model and for training.
 
 <p align="center">
   <img src="https://github.com/AdrianBZG/llama-multimodal-vqa/assets/8275330/256fec3b-fb2a-440c-871f-a2f92953a03c">
@@ -13,7 +13,7 @@ The code is intended to be an easy-to-use starting point for multimodal instruct
 
 ## Usage
 
-To fine-tune the LLaMA 3 model on your own multimodal dataset, you need to prepare the dataset and then run the training script.
+To fine-tune the Llama 3 model on your own multimodal dataset, you need to prepare the dataset and then run the training script.
 
 ### Prepare Dataset
 
@@ -28,15 +28,19 @@ For example, the dataset could look like this:
 ]
 ```
 
+For convenience, we provide a script in data/download_data.sh. You can run this script to download the data to the data/ directory.
+
+```bash
+
 ### Run Training
 
-To fine-tune the LLaMA 3 model on the multimodal dataset, run the training script with the following command:
+To fine-tune the Llama 3 model on the multimodal dataset, run the training script with the following command:
 
 ```bash
 python train.py --dataset_path path/to/dataset.json --output_dir path/to/output_dir --text_model_id="meta-llama/Meta-Llama-3-8B-Instruct" --vision_model_id="openai/clip-vit-large-patch14" --batch_size 32
 ```
 
-This will fine-tune the LLaMA 3 model on the dataset and save the fine-tuned model to the output directory.
+This will fine-tune the Llama 3 model on the dataset and save the fine-tuned model to the output directory.
 
 ## Acknowledgements
 
@@ -47,5 +51,5 @@ This code is based on the [Hugging Face Transformers](https://huggingface.co/tra
 - [Trained model in HF hub](https://huggingface.co/AdrianBZG/llama-3-8B-Instruct-VisualQuestionAnswering)
 - [LLaVA](https://llava-vl.github.io/)
 - [Hugging Face Transformers](https://huggingface.co/transformers/)
-- [LLaMA 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
-- [LLaMA 3 70B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct)
+- [Llama 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)
+- [Llama 3 70B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct)
