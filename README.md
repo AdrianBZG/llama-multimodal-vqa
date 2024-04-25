@@ -7,7 +7,7 @@ The idea is to fine-tune the Llama 3 model on a multimodal dataset that contains
 The code is intended to be an easy-to-use starting point for multimodal instruction tuning. Uses [Hugging Face Transformers](https://huggingface.co/) library for the Llama 3 model and for training.
 
 <p align="center">
-  <img src="https://github.com/AdrianBZG/llama-multimodal-vqa/assets/8275330/256fec3b-fb2a-440c-871f-a2f92953a03c">
+  <img src="https://github.com/AdrianBZG/llama-multimodal-vqa/assets/8275330/fa5beca2-223b-4629-9106-7321b8beec78">
 </p>
 
 
@@ -19,7 +19,7 @@ To fine-tune the Llama 3 model on your own multimodal dataset, you need to prepa
 
 The dataset should be in the format of a JSON file with entries for conversations (textual instructions) and image URIs (visual condition). See [this](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K) for an example.
 
-For example, the dataset could look like this:
+The dataset should look like this:
 
 ```
 [
@@ -30,8 +30,6 @@ For example, the dataset could look like this:
 
 For convenience, we provide a script in data/download_data.sh. You can run this script to download the data to the data/ directory.
 
-```bash
-
 ### Run Training
 
 To fine-tune the Llama 3 model on the multimodal dataset, run the training script with the following command:
@@ -40,7 +38,7 @@ To fine-tune the Llama 3 model on the multimodal dataset, run the training scrip
 python train.py --dataset_path path/to/dataset.json --output_dir path/to/output_dir --text_model_id="meta-llama/Meta-Llama-3-8B-Instruct" --vision_model_id="openai/clip-vit-large-patch14" --batch_size 32
 ```
 
-This will fine-tune the Llama 3 model on the dataset and save the fine-tuned model to the output directory.
+This will fine-tune the Llama 3 model and save the fine-tuned model to the output directory.
 
 ## Acknowledgements
 
